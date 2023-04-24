@@ -23,6 +23,8 @@ const dbconfig = {
 let connection = mysql.createConnection(dbconfig);  //DB 커넥션 생성
 connection.connect(); //DB 접속
 
+// write
+
 //let sql = "INSERT INTO `board` (`B_TITLE`, `USER_ID`) VALUES ('for test01', 'test texts02')";
 
 //connection.query(sql, function(err, results, fields) {
@@ -42,8 +44,6 @@ connection.connect(); //DB 접속
 //});
 
 // Read
-
-
 
 app.get('/', (req, res) => {
     res.sendFile(__dirname + "/view/index.html");
