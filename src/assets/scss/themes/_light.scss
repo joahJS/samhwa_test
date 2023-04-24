@@ -1,0 +1,20 @@
+/* _light.scss */
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --color-base: 255, 255, 255;
+        --color-text: 51, 65, 85;
+        --color-text-highlight: 255, 255, 255;
+        --color-text-anti: 51, 65, 85;
+
+        --color-highlight: ;
+        --color-agree: ;
+        --color-warn: ;
+        --color-error: ;
+        --color-disable: ;
+
+        --color-pane: 204, 211, 255;
+    }
+}
+
+/* _light.scss */

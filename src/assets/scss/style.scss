@@ -1,0 +1,23 @@
+@use 'sass:list';
+@use 'sass:math';
+
+// 1. Base
+@import
+    'base/default', // Default (Reset)
+    'base/setup'; // Set Basic Styles
+
+// 2. Abstracts
+@import
+    'abstracts/functions', // SASS Functions
+    'abstracts/variables'; // Global Variables
+
+// 3. Themes
+@import
+    'themes/light', // System Light Theme
+    'themes/dark'; // System Dark Theme
+
+// 4. Components
+
+// 5. Views
+@import
+    'views/ItemDetail'; // ItemDetail.vue

@@ -1,0 +1,175 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'SUIT Variable';
+    src:
+        local('SUIT Variable'),
+        url('@/assets/fonts/SUIT-Variable.woff2') format('woff2-variations');
+	font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PT';
+    src: local('Pretendard-Light'),
+    url('@/assets/fonts/Pretendard-Light.otf') format('otf');
+    font-weight:100;
+}
+
+@font-face {
+    font-family: 'PT';
+    src: local('Pretendard-Regular'),
+    url('@/assets/fonts/Pretendard-Regular.otf') format('otf');
+    
+}
+
+@font-face {
+    font-family: 'PT';
+    src: local('Pretendard-Bold'),
+    url('@/assets/fonts/Pretendard-Bold.otf') format('otf');
+    font-weight:bold;
+}
+
+@font-face {
+    font-family: 'PT';
+    src: local('Pretendard-Black'),
+    url('@/assets/fonts/Pretendard-Black.otf') format('otf');
+    font-weight:900;
+}
+
+:root {
+    height: 100%;
+    font-family: 'PT', sans-serif;
+    font-size: 20px;
+    line-height: 1;
+    overflow: hidden;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font: inherit;
+}
+
+body {
+    height: 100%;
+    font-size: var(--font14);
+}
+
+#app {
+    height: 100%;
+}
+
+#wrap {
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: overlay;
+}
+
+#contentView {
+    @apply relative w-full;
+
+    padding-left: 320px;
+
+}
+
+.web-common-inner {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 1rem 0.2rem !important;
+}
+
+.common-main-section {
+    padding: 1rem 0;
+    min-height: 63vh;
+}
+
+.all-btn {
+    @apply w-28 p-3 rounded-2xl; 
+
+    background-color: rgba(var(--black), .9);
+    color:  rgb(var(--white));
+
+    &:hover{
+        opacity: .9;
+    }
+}
+
+/* _default.scss */
+
+/* 각 페이지 타이틀 및 after 라인 */
+
+.page-title {
+    @apply flex justify-center w-full font-bold relative;
+
+    animation: title-animate .75s ease-in backwards;
+    margin-bottom: 5rem;
+    font-size: var(--font26);
+    user-select: none;
+}
+
+.page-title::after {
+    content: "";
+    width: 1px;
+    height: 65px;
+    background: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    left: 50%;
+    top: 2rem;
+    
+}
+
+@keyframes title-animate {
+    0% {
+        transform: translateY(20%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* 공통 pager */
+
+.common-pager {
+    @apply flex justify-center;
+    
+    gap: .25rem;
+    margin: 2rem;
+
+    li {
+
+        cursor: pointer;
+        padding: .5rem;
+
+        &:hover {
+            @apply font-bold;
+        }
+
+        &:first-child {
+            margin-right: .5rem;
+        }
+
+        &:last-child {
+            margin-left: .5rem;
+        }
+    }
+
+}//반응형
+
+@media screen and (max-width: 1279px) {}
+@media screen and (max-width: 768px) {}
+@media screen and (max-width: 500px) {
+
+    .all-btn {
+        padding: .5rem;
+    }
+}

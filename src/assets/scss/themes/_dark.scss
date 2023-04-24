@@ -1,0 +1,20 @@
+/* _dark.scss */
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-base: 6, 27, 34;
+        --color-text: 238, 238, 238;
+        --color-text-highlight: 255, 255, 255;
+        --color-text-anti: 51, 65, 85;
+
+        --color-highlight: ;
+        --color-agree: ;
+        --color-warn: ;
+        --color-error: ;
+        --color-disable: ;
+
+        --color-pane: 255, 255, 255;
+    }
+}
+
+/* _dark.scss */
