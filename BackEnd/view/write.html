@@ -4,17 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>express sample!</title>
-
-    <script>
-        fetch('/list')
-            .then(res => {
-                console.table(res)
-            })
-    </script>
+    <title>write page</title>
 </head>
 <body>
-    <h1>이것은 node express 로컬호스트 배포에 성공했다는 메시지 --V</h1>
     <form action="/create" method="post">
         <input type="text" name="createTitle" id="createTitle">
         <input type="text" name="createText" id="createText">
